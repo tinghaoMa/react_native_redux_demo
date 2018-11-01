@@ -33,6 +33,13 @@ export default class App extends Component {
 
     componentDidMount() {
         let t = new Test();
+        let next = t.sayHello;
+        t.sayHello = () => {
+            console.log('before 11111111111');
+            next();
+            console.log('after 11111111111');
+        }
+        t.sayHello();
     }
 }
 

@@ -17,9 +17,9 @@ export default class Test {
         // let name = fun.getName();
         // console.log(`name = ${name}`);
 
-        createFun2().map((result,index,aar)=>{
-            aar[index]();
-        })
+        // createFun2().map((result, index, aar) => {
+        //     aar[index]();
+        // })
 
     }
 
@@ -68,6 +68,11 @@ export default class Test {
 
     test5 = ({x, y = 5} = {}) => {
         console.log(x, y);
+    }
+
+
+    sayHello = () => {
+        console.log('hello 中间件');
     }
 }
 
