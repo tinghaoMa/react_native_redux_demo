@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import configureStore from './store/index';
 
 import Root from './root';
-
+import Test from './Test';
 
 export default class App extends Component {
     constructor() {
@@ -30,5 +30,11 @@ export default class App extends Component {
             </Provider>
         )
     }
+
+    componentDidMount() {
+        let t = new Test();
+    }
 }
+
+
 
