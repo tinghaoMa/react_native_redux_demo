@@ -5,15 +5,22 @@
  */
 
 import createFun from './funTest';
+import createFun2 from './funTest2';
+
 
 export default class Test {
 
     constructor() {
         console.log('test constructor');
-        let fun = createFun('hello name');
-        fun.innerFun1();
-        let name = fun.getName();
-        console.log(`name = ${name}`);
+        // let fun = createFun('hello name');
+        // fun.innerFun1();
+        // let name = fun.getName();
+        // console.log(`name = ${name}`);
+
+        createFun2().map((result,index,aar)=>{
+            aar[index]();
+        })
+
     }
 
     test1 = (param1) => {
