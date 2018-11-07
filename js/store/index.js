@@ -18,7 +18,24 @@ const logger = store => next => action => {
     return result;
 }
 
+let c = ({getState,dispatch}) => next => action =>{
+    console.log('c')
+    return next(action);
+}
+let b = ({getState,dispatch}) => next => action =>{
+    console.log('b')
+    return next(action)
+}
+let a = ({getState,dispatch}) => next => action =>{
+    console.log('a')
+    return next(action)
+}
+
+
 let middlewares = [
+    a,
+    b,
+    c,
     logger,
     thunk
 ];
